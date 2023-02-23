@@ -1,0 +1,5 @@
+# Adding config.py file.
+keys.py
+*.pyc
+Code/__pycache__/api_keys.cpython-39.pyc
+Code/__pycache__/api_keys.cpython-39.pyc
