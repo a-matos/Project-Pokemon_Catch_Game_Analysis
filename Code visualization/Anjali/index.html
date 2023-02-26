@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon.ico"/>
+	<link rel="image_src" href="images/pokemon-web.png">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokemon Cards</title>
+</head>
+<body>
+	<h1 class="search-text">Search your pokemon:</h1>
+	<form id="form">
+		<input type="text" id="search-poke">
+		<button type="submit" id="search-button">Search <i class="fas fa-search"></i></button>
+	</form>
+	<button id="random-button">Random <i class="fas fa-random"></i></button>
+    <div class="card">
+		<p class="click-me "> <span class="click">Click</span><span class="me">me!</span><i class="fas fa-redo-alt"></i></p>
+		<div class="card__inner is-flipped">
+			<div class="card__face card__face--front">
+				<div class="card__content2">
+					<img src="images/backCover.png" alt="back pattern">
+				</div>
+			</div> 
+			<div class="card__face card__face--back">
+				<div class="card__content">
+					<img src="images/backCover.png" alt="back pattern">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    <script src="app.js"></script>
+</body>
+</html>
