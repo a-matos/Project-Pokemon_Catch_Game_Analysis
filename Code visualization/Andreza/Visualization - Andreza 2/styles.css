@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ff00a6;
+	background: linear-gradient(to right, #D4D3DD, #ff00b7);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Lato';
+	margin: 0;
+}
+
+h1 {
+	letter-spacing: 5px;
+}
+
+
+  .instant-search,
+  .instant-search__input {
+	font-family: sans-serif;
+  }
+  
+  .instant-search,
+  .instant-search * {
+	transition: background 0.15s, box-shadow 0.15s;
+  }
+  
+  .instant-search:focus-within {
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .instant-search--loading::after {
+	content: "";
+	position: absolute;
+	top: 10;
+	left: 0;
+	height: 2px;
+	background: #520095;
+	border-radius: 5px;
+	animation: searchIndicator 0.5s infinite ease-in-out;
+  }
+  
+  @keyframes searchIndicator {
+	10% {
+	  width: 15%;
+	}
+	50% {
+	  width: 100%;
+	}
+	100% {
+	  width: 15%;
+	}
+  }
+  
+  .instant-search,
+  .instant-search__input-container {
+	border-radius: 20px;
+  }
+  
+  .instant-search__input-container {
+	display: inline-flex;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px;
+	background: #eeeeee;
+  }
+  
+  .instant-search__input-container:focus-within {
+	background: #ffffff;
+  }
+  
+  .instant-search__input {
+	flex-grow: 1;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 0 6px;
+	background: transparent;
+  }
+  
+  .instant-search__results-container {
+	max-height: 250px;
+	overflow-y: auto;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.1s, opacity 0.1s;
+  }
+  
+  .instant-search__results-container--visible {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .instant-search__result {
+	display: block;
+	color: #333333;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 0.8em;
+	cursor: pointer;
+  }
+  
+  .instant-search__result:hover {
+	background: #eeeeee;
+  }
+  
+  .instant-search__result:not(:last-of-type) {
+	border-bottom: 1px solid #eeeeee;
+  }
+  
+  .instant-search__title {
+	font-size: 1.1em;
+	font-weight: bold;
+  }
+  
+  .instant-search__paragraph {
+	line-height: 1.5;
+	margin: 8px 0;
+  }
+  
+
+
+  :root {
+	--pokedex-red : #de3539;
+	--pokedex-white: #dedede;
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	font-family: 'Rajdhani', sans-serif;
+	height: 100%;
+	background-color: var(--pokedex-red);
+  }
+  
+  .title {
+	text-align: center;
+	font-size: 3em;
+  }
+  
+  .main {
+	display: flex;
+	height: 80vh; /*Viewport height*/
+	width: 90%;
+	margin: 0 auto;
+  }
+  
+  .main .inputFields,
+  .main .pokemonData {
+	width: 50%;
+  }
+  
+  .main .inputFields {
+	display: flex;
+	flex-direction: column;
+	font-size: 2em;
+	text-align: center;
+	justify-content: center;
+	margin-block: 0;
+  }
+  
+  .inputFields input {
+	font-size: 1.2em;
+	border-radius: 10px;
+	margin-right: 10px;
+	font-family: 'Rajdhani', sans-serif;
+  }
+  
+  .inputFields .buttons img {
+	margin: 10px auto;
+	padding: 20px;
+	display: row;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	cursor: pointer;
+  }
+  
+  .pokemonData {
+	display: flex;
+	flex-direction: row;
+  }
+  
+  .pokemonData .container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid black;
+	background-color: var(--pokedex-white);
+	margin-block-end: 20px;
+	border-radius: 5px;
+	padding: 10px;
+  }
+  
+  .pokemonData .container:hover {
+	cursor: pointer;
+	background-color: rgb(121, 255, 255);
+  }
+  
+  .pokemonData .container img {
+	width: 70%;
+	margin: 0 auto;
+  }
+  
+  .pokemonData .container h2 {
+	text-align: center;
+	text-transform: uppercase;
+  }
+  
+  .pokemonData .container .pokemonStatsContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	place-items: center;
+  }
+  
+  .pokemonData .container .pokemonStatsContainer p {
+	box-sizing: border-box;
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+  }
