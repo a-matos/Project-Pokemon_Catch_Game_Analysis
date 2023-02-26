@@ -39,7 +39,14 @@ In 2016 Niantic in collaboration with Nintendo has launched a mobile game called
 ![GIF1-Andreza](https://user-images.githubusercontent.com/114877740/221441893-aede0b37-25c8-42e0-b0de-7c69555414f8.gif)
 
 ## How the weather conditions reflects the game?
------> Add Video
+
+#### By Weather
+![Bar chart](https://user-images.githubusercontent.com/114877740/221442126-cb95d3e3-8463-4952-b542-3f22d9403af0.png)
+
+#### By Continent
+
+![bar chart 2](https://user-images.githubusercontent.com/114877740/221442127-ca87ecd2-70fc-43af-8858-65ce7496daf9.png)
+
 
 ## Mapping the Pokémon according to weather condition.
 ![Pokemon_map](https://user-images.githubusercontent.com/114877740/221439375-4ca0583b-1bdf-411b-a886-e55df4150982.gif)
