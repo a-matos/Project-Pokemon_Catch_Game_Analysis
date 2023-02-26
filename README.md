@@ -33,15 +33,18 @@ In 2016 Niantic in collaboration with Nintendo has launched a mobile game called
 ![pokemon](https://user-images.githubusercontent.com/114877740/221439349-38614b52-4088-4300-b74b-9a6f34578ce2.gif)
 
 ## Let's compare the HP and agility of each Pokémon and be prepared for the battle. 
-![GIF2-Andreza](https://user-images.githubusercontent.com/114877740/221432151-9e20934d-5bcc-4128-86e1-db02e4560ff3.gif)
+![GIF2-Andreza](https://user-images.githubusercontent.com/114877740/221441888-f92e656d-ebbd-4bdb-85d6-bbcbadb1c812.gif)
 
 ## How many types of Pokémon are there by Generation?
-![GIF1-Andreza](https://user-images.githubusercontent.com/114877740/221432365-97ded6eb-c128-4ac9-86df-49a839811188.gif)
+![GIF1-Andreza](https://user-images.githubusercontent.com/114877740/221441893-aede0b37-25c8-42e0-b0de-7c69555414f8.gif)
 
 ## How the weather conditions reflects the game?
 -----> Add Video
 
 ## Mapping the Pokémon according to weather condition.
 ![Pokemon_map](https://user-images.githubusercontent.com/114877740/221439375-4ca0583b-1bdf-411b-a886-e55df4150982.gif)
+
+## Let's Catch'em all!!
+![oh-yeah-pikachu](https://user-images.githubusercontent.com/114877740/221441934-aec00299-f3a0-4eb7-8197-5202a639aaab.gif)
 
 
