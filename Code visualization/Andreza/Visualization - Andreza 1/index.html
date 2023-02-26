@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Pokémon Generations</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+
+
+</head>
+
+
+<body>
+    
+
+    <h1>Type of Pokemon by Generation</h1>
+    <p>There are 18 total official types of Pokemon:</p>
+    <p>Normal, Fire, Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark, and Fairy</p>
+    <div class="buttons">
+        <img src="https://www.xfire.com/wp-content/uploads/2020/12/Pokemon-Type-Chart.webp" id="searchPokemon">
+    </div>
+     
+
+     <select id="selDataset">
+        <option value="Generation_1">Generation_1</option>
+        <option value="Generation_2">Generation_2</option>
+        <option value="Generation_3">Generation_3</option>
+        <option value="Generation_4">Generation_4</option>
+        <option value="Generation_5">Generation_5</option>
+        <option value="Generation_6">Generation_6</option>
+    </select>
+
+    <div id="pie"></div>
+
+    <p>Top 5 Types of Pokemon:<br />
+        <ul>
+            <li>
+                <a>Generation_1: Water, Normal, Bug, and Fire</a>
+            </li>
+            <li>
+                <a>Generation_2: Normal, Bug, Grass, and Fire</a>
+            </li>
+            <li>
+                <a>Generation_3: Normal, Grass, Bug, and Electric</a>
+            </li>
+            <li>
+                <a>Generation_4: Poison, Ground, Fairy, and Bug</a>
+            </li>
+            <li>
+                <a>Generation_5: Poison, Bug, Ground, and Rock</a>
+            </li>
+            <li>
+                <a>Generation_6: Ground, Fighting, Water, and Ghost</a>
+            </li>
+            </ul>
+    </p>
+    <script src="data.js"></script>
+    <script src="chart-A1.js"></script>
+    <script src="style.css"></script>
+</body>
+
+</html>

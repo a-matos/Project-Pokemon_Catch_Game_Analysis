@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Pokemons {% endblock %}</h1>
+    {% for poke in pokes %}
+        <div class='pokemon'>
+            <h3>#{{ poke[0] }} - {{ poke[1] }} </h3>
+        </div>
+    {% endfor %}
+{% endblock %}
