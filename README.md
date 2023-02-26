@@ -1,6 +1,6 @@
 # Pokémon Go! Catch Game Analysis
 
-## Project 3 - Team 12: 
+## Project 3 - Team 12 
 ###### Andreza dos Santos 
 ###### Prabha Shankar
 ###### Hinna Ahmad
