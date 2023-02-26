@@ -1,6 +1,3 @@
-# Project-Video_Game_Industry
-
-
 # Pokémon Go! Catch Game Analysis
 
 ## Project 3 - Team 12: 
