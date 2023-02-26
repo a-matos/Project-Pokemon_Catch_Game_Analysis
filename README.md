@@ -30,7 +30,7 @@ In 2016 Niantic in collaboration with Nintendo has launched a mobile game called
   - Step 4: Make a presentation through PowerPoint
 
 ## First-time player?! Let's meet some of the Pokémon!
------> Add Video
+![pokemon](https://user-images.githubusercontent.com/114877740/221439349-38614b52-4088-4300-b74b-9a6f34578ce2.gif)
 
 ## Let's compare the HP and agility of each Pokémon and be prepared for the battle. 
 ![GIF2-Andreza](https://user-images.githubusercontent.com/114877740/221432151-9e20934d-5bcc-4128-86e1-db02e4560ff3.gif)
@@ -42,11 +42,6 @@ In 2016 Niantic in collaboration with Nintendo has launched a mobile game called
 -----> Add Video
 
 ## Mapping the Pokémon according to weather condition.
------> Add Video
+![Pokemon_map](https://user-images.githubusercontent.com/114877740/221439375-4ca0583b-1bdf-411b-a886-e55df4150982.gif)
 
 
-
-## Notes 
-
-    * A database is used to house the data (SQL). 
-    * The project is powered by a Python Flask API and includes HTML/CSS, JavaScript, and the chosen database. 
