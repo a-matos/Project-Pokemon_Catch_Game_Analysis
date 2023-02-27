@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+        <html lang="en">
+           <head>
+              <meta charset="UTF-8"/>
+              <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>Pokemon Appearances 2016</title>
+              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+              <!-- Our CSS -->
+              <link rel="stylesheet" type="text/css" href="static/css/style.css">
+           </head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Project 3 -Pokemon Catch Game Analysis 2016</a>
+    </nav>
+    <hr>
+    <p> <img src="{{url_for('static', filename='pokemon38.jpg')}}" style="width: 1800px; height: 250px"></p>
+
+    <div class="content">
+        <form name="pokenames" action="results.html" method="POST">
+            <label for="pokenames">Choose a Pokemon:</label>
+            <select name= pokenames  method="GET" action="/">
+                {% for pokename in pokenames %}
+                    <option  value= {{pokename}}>{{pokename}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="weathers">Choose a Weather Condition:</label>
+            <select name= weathers  method="GET" action="/">
+                {% for weather in weathers %}
+                    <option  value= {{weather}}>{{weather}}</option>
+                {% endfor %}
+            </select>
+ 
+            <button type="submit">Map It!</button>
+        </form>
+        <br/>
+        <strong>Chosen Pokemon:</strong>{{pchosen}}
+        <br/>
+        <strong>Chosen Weather Condition:</strong>{{wchosen}}
+        <br/>
+        <br/>
+
+
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div id = "map" style = "width: 900px; height: 580px"></div>   
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="{{url_for('static', filename='Charmander.gif')}}" style="width: 250px; height: 250px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="{{url_for('static', filename='Picachu.gif')}}" style="width: 250px; height: 250px">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table style="width:600px" border="1">
+                    <tr>
+                        <th>Weather</th>
+                        <th>Pokemon</th>
+                        <th>Appearances</th>
+                    </tr>
+                    {% for stat in stats %}
+                    <tr>
+                        <td>{{stat.weather}}</td>
+                        <td>{{stat.pokemon}}</td>
+                        <td align="right" >{{stat.count}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+    </table>
+    <p> <img src="{{url_for('static', filename='pokemon38.jpg')}}" style="width: 1800px; height: 250px"></p>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    <script>
+         // Creating map options
+        // Creating a Layer object
+        var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+        var mapOptions = {
+            center: [42.5260, -105.2551],
+            zoom: 3,
+            layers: [layer]
+            };
+                 
+        // Creating a map object
+        var mymap = new L.map('map', mapOptions);
+
+        // Function to determine marker color
+        function circleColor(pcount) {
+            if (pcount < 500) {
+                pcolor = '#64B5F6';
+            } else if (pcount <1000) {
+                pcolor = '#43A047';
+            } else if (pcount < 2000) {
+                pcolor = '#FFF176';
+            } else if (pcount < 3000){
+                pcolor = '#FF3300';
+            } else if (pcount < 4000){
+                pcolor = '#FB8C00';
+            }  else if (pcount < 5000){
+                pcolor = '#6666cc';
+            } else {
+                pcolor = '#B71C1C';
+            } 
+            return pcolor;
+        };
+
+        // Function to determine marker size
+        function circleSize(pcount) {
+            pradius= pcount *25;
+            return pradius;
+        };
+
+ 
+
+        {% for post in posts %}
+            var circle = L.circle({
+                    lat:{{post.lat}},
+                    lng:{{post.lng}}
+                    }, {
+                    fillColor:circleColor({{post.count}}),
+                    fillOpacity:0.5,
+                    color:'black',
+                    stroke: true,
+                    weight: 1,
+                    radius:circleSize({{post.count}})
+                    }).addTo(mymap);
+        {% endfor %}
+
+
+        // Create legend 
+        var legend = L.control({ position: "bottomright" });
+
+        legend.onAdd = function (mymap) {
+            var div = L.DomUtil.create("div", "legend");
+            div.innerHTML += "<h4 style='text-align: center'>Legend by Pokemon Appareances</h4>";
+            div.innerHTML += '<i style="background: #64B5F6"></i><span>500 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #43A047"></i><span>1000 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #FFF176"></i><span>2000 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #FF3300"></i><span>3000 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #FB8C00"></i><span>4000 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #6666cc"></i><span>5000 Pokemon Appearances or less</span><br>';
+            div.innerHTML += '<i style="background: #B71C1C"></i><span>More than 5000 Pokemon Appearances </span><br>';
+            return div;
+        };
+        legend.addTo(mymap);
+
+    </script> 
+</body>
+           
+</html>

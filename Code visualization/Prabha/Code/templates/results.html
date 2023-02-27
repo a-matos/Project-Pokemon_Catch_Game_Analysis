@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Results</h2>
+
+{% for p in posts %}
+    <strong>City:</strong> {{ p.city }}
+    <strong>Count:</strong> {{ p.cnt}}  
+{% endfor %}
+{% endblock %}
