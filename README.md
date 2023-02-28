@@ -50,6 +50,7 @@ In 2016 Niantic in collaboration with Nintendo has launched a mobile game called
 
 ## Mapping the Pokémon according to weather condition.
 ![Pokemon_map](https://user-images.githubusercontent.com/114877740/221439375-4ca0583b-1bdf-411b-a886-e55df4150982.gif)
+database.ini (password is required to run)
 
 ## Let's Catch'em all!!
 ![oh-yeah-pikachu](https://user-images.githubusercontent.com/114877740/221441934-aec00299-f3a0-4eb7-8197-5202a639aaab.gif)
