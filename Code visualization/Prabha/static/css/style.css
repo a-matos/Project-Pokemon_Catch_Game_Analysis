@@ -1,0 +1,64 @@
+nav a {
+    color: #d64161;
+    font-size: 3em;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #map,
+  body,
+  html {
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Legend specific */
+  .legend {
+    padding: 6px 8px;
+    background: rgba(133, 126, 126, 0.8);
+  }
+  
+  .legend i {
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin: 0 8px 0 0;
+    opacity: 1;
+  }
+  
+  .pokemon {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f7f4f4;
+}
+
+.poke2 {
+        margin-left: 50px;
+        font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height:50%;
+  }
