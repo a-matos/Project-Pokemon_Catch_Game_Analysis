@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poke World</title>
+    <!-- Leaflet CSS -->
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+        .pokemon {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f7f4f4;
+        }
+
+        .poke2 {
+                margin-left: 50px;
+                font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">FlaskApp</a>
+        <a href="#">About</a>
+    </nav>
+    <hr>
+    <div class="content">
+        <h1>Pokemons</h1>
+
+        <form name="pokenames" action="results.html" method="POST">
+            <label for="pokenames">Choose a Pokemon:</label>
+            <select name= pokenames  method="GET" action="/">
+                {% for pokename in pokenames %}
+                    <option  value= {{pokename}} SELECTED>{{pokename}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="weathers">Choose a Weather Condition:</label>
+            <select name= weathers  method="GET" action="/">
+                {% for weather in weathers %}
+                    <option  value= {{weather}} SELECTED>{{weather}}</option>
+                {% endfor %}
+            </select>
+ 
+            <button type="submit">Show!</button>
+        </form>
+
+        <br/>
+        <strong>Chosen Pokemon:</strong>{{pchosen}}
+        <br/>
+        <strong>Chosen Weather Condition:</strong>{{wchosen}}
+        <br/>
+        <br/>
+        {% for p in posts %}
+            <strong>City:</strong> {{ p.city }}
+            <strong>Count:</strong> {{ p.cnt}}  
+            {% endfor %}
+    </div>
+
+    <div id =”map” style = “width:800px; height:600px;”></div>
+
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <script>
+         // Creating map options
+        var mapOptions = {
+            center: [17.385044, 78.486671],
+            oom: 10
+        }
+ 
+        // Creating a map object
+        var map = new L.map(‘map’, mapOptions);
+ 
+        // Creating a Layer object
+        var layer = new     L.TileLayer(‘http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’);
+ 
+        // Adding layer to the map
+        map.addLayer(layer);
+    </script>
+
+ 
+</body>
+</html>
