@@ -5,7 +5,6 @@
 ###### Prabha Shankar
 ###### Hinna Ahmad
 ###### Anjali Sagar
-###### Instructor: Abdo
 
 ## Objective of the project
 In 2016 Niantic in collaboration with Nintendo has launched a mobile game called Pokémon Go. The objective of this project is analyze some particularise of this game which has been downloaded over 1 billion times and named “Best Mobile Game” by the Game Developers Choice Awards and “Best App of the Year” by TechCrunch.
